@@ -1,13 +1,15 @@
-import ListOfPupils from "./ListOfPupils";
-import PupilForm from "./PupilForm";
-import { pupils as initialPupils } from "../tutoringData/pupils";
 import { useState } from "react";
+import { pupils as initialPupils} from "./pupils";
+import ListOfPupils from "./ListOfPupils";
+import PupilForm from "./AddPupilForm";
+import '../ComponentsStyles/FormStyles.css'
 
-export default function Show(){
+export default function PupilContainer(){
     const [pupil, setPupil] = useState({});
     const [pupils, setPupils] = useState(initialPupils);
+    
     return (
-        <>
+        <div className="pupil-container">
             <ListOfPupils pupils={pupils} />
             <PupilForm 
                 pupil={pupil}
@@ -15,7 +17,6 @@ export default function Show(){
                 setPupil={setPupil}
                 setPupils={setPupils}
             />
-        </>
+        </div>
     );
-
 }

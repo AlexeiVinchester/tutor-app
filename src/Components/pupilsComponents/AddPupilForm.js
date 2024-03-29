@@ -1,5 +1,4 @@
-import InputField from "./InputField";
-import '../ComponentsStyles/PupilFormStyles.css';
+import InputField from "../InputField";
 
 export default function PupilForm({pupil, pupils, setPupil, setPupils}){
 

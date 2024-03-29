@@ -12,15 +12,23 @@ body {
     height: 100%;
 }
 
-.pupil-form-container {
-    max-width: 650px;
-    padding: 28px;
-    margin: 0, 28px;
-    box-shadow: 0 15px 20px #ABB2B9;
-    margin-top: 50px;
+.pupil-container, .lesson-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
-.new-pupil-header {
+.pupil-form-container, .lesson-form-container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 20px;
+    box-shadow: 0 15px 20px #ABB2B9;
+    margin-top: 50px;
+    background-color: #eeebee;
+}
+
+.new-pupil-header, .new-lesson-header {
     font-size: 26px;
     font-weight: 600;
     text-align: center;
@@ -81,4 +89,6 @@ body {
 
 .button-container button:hover {
     background-image: linear-gradient(to right, #61045f, #aa076b);
+    font-size: 22px;
+    cursor: pointer;
 }

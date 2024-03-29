@@ -1,11 +1,14 @@
 import './App.css';
-import Show from './Components/Show';
-
-
+import LessonContainer from './Components/lessonsComponents/LessonsContainer';
+import PupilContainer from './Components/pupilsComponents/PupilContainer';
 function App() {
   return (
     <>
-        <Show />
+        <PupilContainer />
+        <br></br>
+        <br></br>
+        <LessonContainer />
+        
     </>
   );
 }

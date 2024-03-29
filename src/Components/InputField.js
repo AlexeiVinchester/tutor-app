@@ -1,4 +1,4 @@
-import '../ComponentsStyles/PupilFormStyles.css';
+
 export default function InputField({ fieldValue, onChange}) {
     return (
         <div className="input-container">
