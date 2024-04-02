@@ -5,8 +5,4 @@ export class Pupil {
         this.price = price;
         this.form = form;
     }
-
-    sayPrice(){
-        return this.price;
-    }
 }
