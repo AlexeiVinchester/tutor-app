@@ -1,7 +1,8 @@
-import InputField from "../InputField";
-
+import FormContainer from "../FormContainer";
 
 export default function AddLessonForm({lesson, lessons, setLesson, setLessons}){
+
+    const fieldValues = ['id', 'name', 'date', 'price'];
 
     function handleClick(){
         setLessons([
@@ -18,17 +19,12 @@ export default function AddLessonForm({lesson, lessons, setLesson, setLessons}){
     }
 
     return (
-        <div className="lesson-form-container">
-            <h2 className="new-lesson-header">Add new Lesson</h2>
-            <div className="inputs-container">
-                <InputField fieldValue="id" onChange={handleChange}/>
-                <InputField fieldValue="name" onChange={handleChange}/>
-                <InputField fieldValue="date" onChange={handleChange}/>
-                <InputField fieldValue="price" onChange={handleChange}/>
-            </div>
-            <div className="button-container">
-                <button onClick={handleClick}>Add new lesson</button>
-            </div>
-        </div>
+        <FormContainer 
+            value='lesson' 
+            fieldValues={fieldValues}
+            onChange={handleChange}
+            onClick={handleClick
+            }
+        />
     );
 }

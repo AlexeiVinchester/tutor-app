@@ -1,6 +1,8 @@
-import InputField from "../InputField";
+import FormContainer from "../FormContainer";
 
 export default function PupilForm({pupil, pupils, setPupil, setPupils}){
+
+    const fieldValues = ['id', 'name', 'price', 'form'];
 
     function handleClick(){
         setPupils([
@@ -17,17 +19,12 @@ export default function PupilForm({pupil, pupils, setPupil, setPupils}){
     }
 
     return (
-        <div className="pupil-form-container">
-            <h2 className="new-pupil-header">Add new Pupil</h2>
-            <div className="inputs-container">
-                <InputField fieldValue="name" onChange={handleChange}/>
-                <InputField fieldValue="price" onChange={handleChange}/>
-                <InputField fieldValue="form" onChange={handleChange}/>
-                <InputField fieldValue="id" onChange={handleChange}/>
-            </div>
-            <div className="button-container">
-                <button onClick={handleClick}>Add new pupil</button>
-            </div>
-        </div>
+        <FormContainer 
+            value='pupil' 
+            fieldValues={fieldValues}
+            onChange={handleChange}
+            onClick={handleClick
+            }
+        />
     );
 }
