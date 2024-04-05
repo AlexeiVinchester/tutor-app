@@ -2,7 +2,7 @@ import InputContainer from "./InputContainer";
 import FormHeader from "./FormHeader";
 import AddButton from "./AddButton";
 
-export default function FormContainer({value, fieldValues, onChange, onClick}){
+export default function FormLayouts({value, fieldValues, onChange, onClick}){
     return (
         <div className={`${value}-form-container`}>
             <FormHeader value={value} />
