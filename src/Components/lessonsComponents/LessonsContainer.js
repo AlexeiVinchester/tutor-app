@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { lessons as initialLessons } from "./lessons";
-import LessonsTable from "./LessonsTable";
 import '../ComponentsStyles/FormStyles.css'
 import Form from "../Form";
+import Table from "../Table";
 
 export default function LessonContainer(){
     const [lesson, setLesson] = useState({});
@@ -11,7 +11,7 @@ export default function LessonContainer(){
 
     return (
         <div className="lesson-container">
-            <LessonsTable lessons={lessons}/>
+            <Table caption="Lessons" columnNames={fieldsValues} data={lessons} />
             <Form 
                 param={lesson}
                 setParam={setLesson}
@@ -19,7 +19,6 @@ export default function LessonContainer(){
                 setParams={setLessons}
                 fieldsValues={fieldsValues}
                 value="lesson"
-                
             />
         </div>
         

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { pupils as initialPupils} from "./pupils";
-import ListOfPupils from "./ListOfPupils";
 import '../ComponentsStyles/FormStyles.css'
 import Form from "../Form";
+import Table from "../Table";
 
 export default function PupilContainer(){
     const [pupil, setPupil] = useState({});
@@ -11,7 +11,7 @@ export default function PupilContainer(){
 
     return (
         <div className="pupil-container">
-            <ListOfPupils pupils={pupils} />
+            <Table caption='Pupils' columnNames={fieldsValues} data={pupils} />
             <Form 
                 param={pupil}
                 setParam={setPupil}
@@ -19,7 +19,6 @@ export default function PupilContainer(){
                 setParams={setPupils}
                 fieldsValues={fieldsValues}
                 value="pupil"
-                
             />
         </div>
     );
