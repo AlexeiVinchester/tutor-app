@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { lessons as initialLessons } from "./lessons";
 import '../ComponentsStyles/FormStyles.css'
-import Form from "../Form";
-import Table from "../Table";
+import Form from "../Form-components/Form";
+import Table from "../Table-components/Table";
 
 export default function LessonContainer(){
     const [lesson, setLesson] = useState({});

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { pupils as initialPupils} from "./pupils";
 import '../ComponentsStyles/FormStyles.css'
-import Form from "../Form";
-import Table from "../Table";
+import Form from "../Form-components/Form";
+import Table from "../Table-components/Table";
 
 export default function PupilContainer(){
     const [pupil, setPupil] = useState({});
