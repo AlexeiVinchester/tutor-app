@@ -1,6 +1,6 @@
 import './App.css';
-import LessonContainer from './Components/lessonsComponents/LessonsContainer';
-import PupilContainer from './Components/pupilsComponents/PupilContainer';
+import LessonContainer from './Components/Lessons-components/LessonsContainer';
+import PupilContainer from './Components/Pupils-components/PupilContainer';
 function App() {
   return (
     <>

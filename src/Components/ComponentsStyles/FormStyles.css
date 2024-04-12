@@ -16,7 +16,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 .pupil-form-container, .lesson-form-container{

@@ -3,7 +3,7 @@ export default function TableTr({obj, columnNames}) {
         <tr key={obj.id}>
             {
                 columnNames.map(columnName => (
-                    <td>{obj[columnName]}</td>
+                    <td className={`td-${columnName}`} >{obj[columnName]}</td>
                 ))
             }
         </tr>

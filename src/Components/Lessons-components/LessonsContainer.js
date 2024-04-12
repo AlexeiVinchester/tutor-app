@@ -11,7 +11,12 @@ export default function LessonContainer(){
 
     return (
         <div className="lesson-container">
-            <Table caption="Lessons" columnNames={fieldsValues} data={lessons} />
+            <Table 
+                caption="Lessons" 
+                columnNames={fieldsValues} 
+                data={lessons} 
+                className="lessons-table"
+            />
             <Form 
                 param={lesson}
                 setParam={setLesson}
