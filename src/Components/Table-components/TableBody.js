@@ -5,7 +5,7 @@ export default function TableBody({objs, columnNames}){
         <tbody>
             {
                 objs.map(obj => (
-                   <TableTr obj={obj} columnNames={columnNames} />
+                   <TableTr key={obj.id} obj={obj} columnNames={columnNames} />
                 ))
             }
         </tbody>

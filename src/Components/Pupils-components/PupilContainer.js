@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { pupils as initialPupils} from "./pupils";
 import '../ComponentsStyles/FormStyles.css'
 import Form from "../Form-components/Form";
 import Table from "../Table-components/Table";
+import { getCurrentValue } from "../../localStorageWorker";
 
 export default function PupilContainer(){
     const [pupil, setPupil] = useState({});
-    const [pupils, setPupils] = useState(initialPupils);
+    const [pupils, setPupils] = useState(() => getCurrentValue('pupils'));
     const fieldsValues = ['id', 'name', 'price', 'form'];
 
     return (

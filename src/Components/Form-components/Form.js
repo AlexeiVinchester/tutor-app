@@ -1,4 +1,5 @@
 import FormLayouts from "./FormLayouts";
+import { addValueToLocalStorage } from "../../localStorageWorker";
 
 export default function Form({
     param, 
@@ -8,11 +9,14 @@ export default function Form({
     fieldsValues, 
     value}){
         
+        const storageKey = value + 's';
+
         function handleClick(){
             setParams([
                 ...params, 
                 {...param}
             ]);
+            addValueToLocalStorage(storageKey, param)
         }
     
         function handleChange(e){
@@ -26,8 +30,7 @@ export default function Form({
                 value={value} 
                 fieldValues={fieldsValues}
                 onChange={handleChange}
-                onClick={handleClick
-                }
+                onClick={handleClick}
             />
         );
 }
