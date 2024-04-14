@@ -11,7 +11,12 @@ export default function PupilContainer(){
 
     return (
         <div className="pupil-container">
-            <Table caption='Pupils' columnNames={fieldsValues} data={pupils} />
+            <Table 
+                caption='Pupils' 
+                columnNames={fieldsValues} 
+                data={pupils} 
+                className="pupils-table"
+            />
             <Form 
                 param={pupil}
                 setParam={setPupil}

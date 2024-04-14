@@ -2,7 +2,7 @@
 export default function InputField({ fieldValue, onChange}) {
     return (
         <div className="input-container">
-            <label for={fieldValue}>
+            <label>
                 {fieldValue[0].toUpperCase() + fieldValue.slice(1) + ": "} 
             </label>
             <input 

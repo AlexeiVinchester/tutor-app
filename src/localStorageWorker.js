@@ -17,3 +17,6 @@ export function addValueToLocalStorage(key, value){
         currentValue.map(param => JSON.stringify(param)).join(' ; ')   
     )
 }
+
+
+
