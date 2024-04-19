@@ -1,6 +1,6 @@
 import NavBarItem from "./NavBarItem";
 
-export default function NavBarMenu({items, isMenuHide}) {
+export default function NavBarMenu({items, isMenuHide, setMenuState}) {
     return (
         <ul className={isMenuHide ? `menu active` : 'menu'}>
             {
@@ -8,7 +8,7 @@ export default function NavBarMenu({items, isMenuHide}) {
                     <NavBarItem 
                         itemName={item} 
                         key={item} 
-                        handleClick={()=> console.log('')} 
+                        handleClick={()=> setMenuState(item)} 
                     />
                 ))
             }
