@@ -10,12 +10,6 @@ export default function LessonContainer(){
 
     return (
         <div className="lesson-container">
-            <Table 
-                caption="Lessons" 
-                columnNames={fieldsValues} 
-                data={lessons} 
-                className="lessons-table"
-            />
             <Form 
                 param={lesson}
                 setParam={setLesson}
@@ -23,6 +17,12 @@ export default function LessonContainer(){
                 setParams={setLessons}
                 fieldsValues={fieldsValues}
                 value="lesson"
+            />
+            <Table 
+                caption="Lessons" 
+                columnNames={fieldsValues} 
+                data={lessons} 
+                className="lessons-table"
             />
         </div>
         

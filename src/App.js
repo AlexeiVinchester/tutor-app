@@ -1,15 +1,15 @@
 import './index.css';
 import LessonContainer from './Components/Lessons-components/LessonsContainer';
 import PupilContainer from './Components/Pupils-components/PupilContainer';
+import NavBar from './Components/Navbar/NavBar';
+import Footer from './Components/Footer/Footer';
 function App() {
   return (
-    <>
-        <PupilContainer />
-        <br></br>
-        <br></br>
-        <LessonContainer />
-        
-    </>
+    <div>
+      <NavBar />
+      <LessonContainer></LessonContainer>
+      <Footer />
+    </div>
   );
 }
 
