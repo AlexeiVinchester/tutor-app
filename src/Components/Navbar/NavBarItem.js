@@ -1,5 +1,6 @@
 export default function NavBarItem({itemName, handleClick}) {
     return (
+        
         <li>
             <a 
                 href="##" 

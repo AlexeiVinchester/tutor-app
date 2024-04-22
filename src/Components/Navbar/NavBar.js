@@ -2,7 +2,8 @@ import { useState } from "react";
 import NavLogo from "./NavLogo";
 import NavBarMenu from "./NavBarMenu";
 import './NavBar.css';
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import NavbarReactRouter from "../ReactRouter/NavbarReactRouter";
 
 export default function NavBar({setMenuState}) {
 
@@ -11,11 +12,7 @@ export default function NavBar({setMenuState}) {
     return (
         <header className='box'>
             <NavLogo />
-            <NavBarMenu 
-                items={navBarItems} 
-                isMenuHide={isMenuHide}
-                setMenuState={setMenuState}
-            />
+            <NavbarReactRouter isMenuHide={isMenuHide} />
             <div onClick={() => setIsMenuHide(!isMenuHide)} className='menu_btn'>
                 {isMenuHide ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25}/>}  
             </div>
