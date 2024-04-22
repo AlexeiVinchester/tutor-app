@@ -1,5 +1,5 @@
 import React from "react";
-import LessonContainer from "../Lessons-components/LessonsContainer";
+import LessonContainer from "./LessonsContainer";
 
 export default function Lessons() {
     return (

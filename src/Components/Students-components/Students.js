@@ -1,10 +1,10 @@
 import React from "react";
-import PupilContainer from "../Pupils-components/PupilContainer";
+import StudentContainer from "./StudentsContainer";
 
 export default function Students() {
     return (
         <div>
-            <PupilContainer />
+            <StudentContainer />
         </div>
     );
     

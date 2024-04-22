@@ -4,9 +4,9 @@ import Form from "../Form-components/Form";
 import Table from "../Table-components/Table";
 import { getCurrentValue } from "../../localStorageWorker";
 
-export default function PupilContainer(){
-    const [pupil, setPupil] = useState({});
-    const [pupils, setPupils] = useState(() => getCurrentValue('pupils'));
+export default function StudentContainer(){
+    const [student, setStudent] = useState({});
+    const [students, setStudents] = useState(() => getCurrentValue('pupils'));
     const fieldsValues = ['id', 'name', 'price', 'form'];
 
     return (
@@ -14,14 +14,14 @@ export default function PupilContainer(){
             <Table 
                 caption='Pupils' 
                 columnNames={fieldsValues} 
-                data={pupils} 
+                data={students} 
                 className="pupils-table"
             />
             <Form 
-                param={pupil}
-                setParam={setPupil}
-                params={pupils}
-                setParams={setPupils}
+                param={student}
+                setParam={setStudent}
+                params={students}
+                setParams={setStudents}
                 fieldsValues={fieldsValues}
                 value="pupil"
             />

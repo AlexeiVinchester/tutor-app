@@ -1,4 +1,4 @@
-export class Pupil {
+export class Student {
     constructor(id, name, price, form){
         this.id = id;
         this.name = name;
