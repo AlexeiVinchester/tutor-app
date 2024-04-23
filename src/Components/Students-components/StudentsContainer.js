@@ -10,12 +10,12 @@ export default function StudentContainer(){
     const fieldsValues = ['id', 'name', 'price', 'form'];
     
     return (
-        <div className="pupil-container">
+        <div className="students-container">
             <Table 
-                caption='Pupils' 
+                caption='Students' 
                 columnNames={fieldsValues} 
                 data={students} 
-                className="pupils-table"
+                className="students-table"
             />
             <Form 
                 param={student}
@@ -23,7 +23,7 @@ export default function StudentContainer(){
                 params={students}
                 setParams={setStudents}
                 fieldsValues={fieldsValues}
-                value="pupil"
+                value="student"
             />
         </div>
     );
