@@ -8,7 +8,7 @@ export default function StudentContainer(){
     const [student, setStudent] = useState({});
     const [students, setStudents] = useState(() => getCurrentValue('pupils'));
     const fieldsValues = ['id', 'name', 'price', 'form'];
-
+    
     return (
         <div className="pupil-container">
             <Table 

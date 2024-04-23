@@ -5,7 +5,7 @@ import Lessons from './Components/Lessons-components/Lessons';
 import Students from './Components/Students-components/Students';
 import Tutors from './Components/Tutors/Tutors';
 import Contacts from './Components/Contacts/Contacts';
-import NavBar from './Components/Navbar/Navbar';
+import NavBar from './Components/Navbar/NavBar';
 
 function App() {
   return (
