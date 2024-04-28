@@ -18,5 +18,9 @@ export function addValueToLocalStorage(key, value){
     )
 }
 
+export function getEarnedSumm(){
+    return getCurrentValue('lessons').reduce((cur, item) => +cur + +item.price, 0);
+}
 
+console.log(getEarnedSumm())
 
