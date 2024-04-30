@@ -18,6 +18,14 @@ export function addValueToLocalStorage(key, value) {
     )
 }
 
+/*
+    Можно на вход подать строку 2024-04 к примеру
+*/
+
+export function getLessonsForMonth(month){
+    return getCurrentValue('lessons').filter(lesson => lesson.date.includes(month))
+}
+
 export function getEarnedSumm() {
     return getCurrentValue('lessons').reduce((cur, item) => +cur + +item.price, 0);
 }
@@ -35,8 +43,9 @@ export function getAmountOfLessonsFor(student) {
 }
 
 export function getStudents(){
-    return getCurrentValue('pupils').map(student => student.name);
+    return getCurrentValue('students').map(student => student.name);
 }
 
+console.log(getLessonsForMonth('2024-04'))
 
 

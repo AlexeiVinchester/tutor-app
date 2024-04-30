@@ -21,7 +21,7 @@ export default function Form({
         function handleChange(e){
             setParam({
                 ...param, 
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value.trim()
             })
         }
         return (
