@@ -2,8 +2,9 @@
     Здесь подразумевается, что значение под ключами представляет собой
     строку из объектов JSON.stringify(), разделенных ;
 */
-import Lesson from "./Components/Lessons-components/lesson";
-import { Student } from "./Components/Students-components/Student";
+// import Lesson from "./Components/Lessons-components/lesson";
+// import { Student } from "./Components/Students-components/Student";
+
 export function getCurrentValue(key) {
     return localStorage.getItem(key)
         .split(' ; ')

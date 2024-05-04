@@ -6,7 +6,7 @@ import { getCurrentValue } from "../../localStorageWorker";
 
 export default function StudentContainer(){
     const [student, setStudent] = useState({});
-    const [students, setStudents] = useState(() => getCurrentValue('pupils'));
+    const [students, setStudents] = useState(() => getCurrentValue('students'));
     const fieldsValues = ['id', 'name', 'price', 'form'];
     
     return (
