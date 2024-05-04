@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavLogo from "./NavLogo";
 import './NavBar.css';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
-import NavbarMenu from "./NavbarMenu";
+import NavbarMenu from "./NavBarMenu";
 
 export default function NavBar() {
     const [isMenuHide, setIsMenuHide] = useState(false);

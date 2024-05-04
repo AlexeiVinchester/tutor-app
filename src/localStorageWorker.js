@@ -46,6 +46,6 @@ export function getStudents(){
     return getCurrentValue('students').map(student => student.name);
 }
 
-console.log(getLessonsForMonth('2024-04'))
+console.log(localStorage.getItem('students'))
 
 
