@@ -1,5 +1,6 @@
 import FormLayouts from "./FormLayouts";
 import { addValueToLocalStorage } from "../../localStorageWorker";
+import { getNextId } from "../../localStorageWorker";
 export default function Form({
     param, 
     params, 
@@ -9,7 +10,6 @@ export default function Form({
     value}){
         
         const storageKey = value + 's';
-
         function handleClick(){
             setParams([
                 ...params, 
@@ -17,10 +17,11 @@ export default function Form({
             ]);
             addValueToLocalStorage(storageKey, param)
         }
-    
+        
         function handleChange(e){
             setParam({
                 ...param, 
+                id: getNextId(value),
                 [e.target.name]: e.target.value.trim()
             })
         }

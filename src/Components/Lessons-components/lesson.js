@@ -66,5 +66,5 @@ let startLessons = [
 let newStr = startLessons.map(item => JSON.stringify(item)).join(' ; ');
 localStorage.setItem('lessons', newStr)
 
-console.log(localStorage.getItem('lessons'));
+
 
