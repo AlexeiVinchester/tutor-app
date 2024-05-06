@@ -40,10 +40,17 @@ export function getAmountOfLessonsForStudentForMonth(month, student) {
     return getLessonsForStudentForMonth(month, student).length;
 }
 
-export function getNextId(){
+export function getNextIdForLessons(){
     return getAmountOfLessons() + 1;
 }
 
+export function getNextIdForStudents() {
+    return getCurrentValue('students').length + 1;
+}
+
+export function getNextId(value){
+    return value === 'lesson' ? getNextIdForLessons() : getNextIdForStudents();
+}
 // below functions for all period
 
 export function getEarnedSumm() {
