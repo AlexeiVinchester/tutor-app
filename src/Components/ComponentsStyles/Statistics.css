@@ -1,0 +1,42 @@
+.select-section {
+    max-width: 350px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 5px 5px #ABB2B9;
+    background-color: #eeebee;
+    border-radius: .8rem;
+}
+
+.select-label {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+    background-image: linear-gradient(to right, #aa076b , #61045f);
+    padding-bottom: 8px;
+}
+
+.select-section select {
+    width: 160px;
+    padding: 5px;
+    border-radius: 10px;
+    font: 400 16px Arial;
+    
+    color:#aa076b;
+    text-align: center;
+    border: 1px solid #61045f;
+}
+
+.select-section select::-ms-expand {
+    display: none;
+}
+
+.select-section select:focus {
+    outline: none;
+    box-shadow: 0 0 10px -1px #aa076b;
+}
+
+
+
