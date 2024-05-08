@@ -13,24 +13,37 @@
     
 }
 
+.table-body {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #0005;
+    border-radius: .8rem 0 0 .8rem;
+    text-align: center;
+    max-height: 400px;
+    overflow: auto;
+}
+
 .students-table {
     width: 450px;
 }
 
 .lessons-table {
     width: 600px;
+    
 }
 
 table {
     border-collapse: collapse;
     box-shadow: 0 5px 10px #0005;
-    border-radius: .8rem;
+    border-radius: .8rem .8rem 0 .8rem;
     text-align: center;
 }
+
 
 thead {
     box-shadow: 0 5px 10px 1px #0005;
     background-color: #eeebee;
+    position: sticky;
+    top: 0; 
 }
 
 th {
@@ -39,7 +52,10 @@ th {
     letter-spacing: 0.1rem;
     font-size: 0.7rem;
     font-weight: 700;
-}
+    position: sticky; 
+    top: 0; 
+} 
+
 
 td {
     padding: .6rem .8rem;
@@ -51,6 +67,10 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: rgba(241, 198, 198, 0.4);
+}
+
+.table {
+    margin-bottom: 40px;
 }
 
 .td-name {

@@ -5,6 +5,7 @@
   font-family: sans-serif;
 }
 
+
 ul, li {
   list-style: none;
 }
@@ -17,4 +18,11 @@ a {
 .container-header {
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.text-style {
+  color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+    background-image: linear-gradient(to right, #aa076b , #61045f);
 }

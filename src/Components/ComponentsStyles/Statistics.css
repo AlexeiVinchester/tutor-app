@@ -1,13 +1,54 @@
+
+.statistics-container {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.full-statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.choosed-statistics {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tutor-name {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
 .select-section {
-    max-width: 350px;
+    width: 340px;
     padding: 20px;
     margin: 20px;
     box-shadow: 0 5px 5px #ABB2B9;
-    background-color: #eeebee;
+    background-color: #f7f5f7;
     border-radius: .8rem;
 }
 
-.select-label {
+.info-label {
     font-size: 16px;
     font-weight: 600;
     text-align: center;
@@ -16,6 +57,7 @@
 	background-clip: text;
     background-image: linear-gradient(to right, #aa076b , #61045f);
     padding-bottom: 8px;
+    margin-right: 6px;
 }
 
 .select-section select {
@@ -37,6 +79,39 @@
     outline: none;
     box-shadow: 0 0 10px -1px #aa076b;
 }
+
+
+.value-section {
+    display: flex;
+    justify-content: center;
+}
+
+.value-area {
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.value-area .inner-area{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #aa076b;
+    line-height: 117px;
+    color: #61045f;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.value-area .inner-area .text{
+  font-size: 36px;
+  font-weight: 400;
+}
+
+
 
 
 

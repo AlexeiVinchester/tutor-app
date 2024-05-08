@@ -41,7 +41,7 @@ export function getAmountOfLessonsForStudentForMonth(month, student) {
 }
 
 export function getNextIdForLessons(){
-    return getAmountOfLessons() + 1;
+    return getFullAmountOfLessons() + 1;
 }
 
 export function getNextIdForStudents() {
@@ -51,13 +51,19 @@ export function getNextIdForStudents() {
 export function getNextId(value){
     return value === 'lesson' ? getNextIdForLessons() : getNextIdForStudents();
 }
+
+export function getIncomeForStudentPerMonth(month, student){
+    return getLessonsForStudentForMonth(month, student)
+            .reduce((cur, item) => +cur + +item.price, 0);
+}
+
 // below functions for all period
 
-export function getEarnedSumm() {
+export function getFullEarnedSumm() {
     return getCurrentValue('lessons').reduce((cur, item) => +cur + +item.price, 0);
 }
 
-export function getAmountOfLessons() {
+export function getFullAmountOfLessons() {
     return getCurrentValue('lessons').length;
 }
 
