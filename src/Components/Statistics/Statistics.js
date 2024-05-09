@@ -9,25 +9,27 @@ import {
             getFullEarnedSumm,
             getFullAmountOfLessons
         } from "../../localStorageWorker";
+        
 import Table from "../Table-components/Table";
 import { useState } from "react";
 import { getCurrentValue } from "../../localStorageWorker";
 import InfoCircle from "./InfoCircle";
 import InfoSection from "./InfoSection";
+
 export default function Statistics() {
     const months = {
-        January: '2024-01',
-        Febriary: '2024-02',
-        March: '2024-03',
-        April: '2024-04',
-        May: '2024-05',
-        June: '2024-06',
-        July: '2024-07',
-        August: '2024-08',
-        September: '2024-09',
-        October: '2024-10',
-        November: '2024-11',
-        December: '2024-12'
+        January: '-01-',
+        Febriary: '-02-',
+        March: '-03-',
+        April: '-04-',
+        May: '-05-',
+        June: '-06-',
+        July: '-07-',
+        August: '-08-',
+        September: '-09-',
+        October: '-10-',
+        November: '-11-',
+        December: '-12-'
     };
     const fieldsValues = ['id', 'name', 'date', 'price'];
     const students = getStudents();
