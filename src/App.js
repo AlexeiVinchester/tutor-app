@@ -6,7 +6,6 @@ import Students from './Components/Students-components/Students';
 import Statistics from './Components/Statistics/Statistics';
 import Contacts from './Components/Contacts/Contacts';
 import NavBar from './Components/Navbar/NavBar';
-
 function App() {
   return (
     <div>
