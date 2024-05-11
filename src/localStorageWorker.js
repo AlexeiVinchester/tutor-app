@@ -20,24 +20,24 @@ export function addValueToLocalStorage(key, value) {
     )
 }
 
-export function getLessonsForMonth(month){
-    return getCurrentValue('lessons').filter(lesson => lesson.date.includes(month))
+export function getLessonsForMonth(month, year){
+    return getCurrentValue('lessons').filter(lesson => lesson.date.includes(`${year}-${month}-`))
 }
 
-export function getEarnedSumForMonth(month){
-    return getLessonsForMonth(month).reduce((cur, item) => +cur + +item.price, 0);
+export function getEarnedSumForMonth(month, year){
+    return getLessonsForMonth(month, year).reduce((cur, item) => +cur + +item.price, 0);
 }
 
-export function getAmountOfLessonsForMonth(month){
-    return getLessonsForMonth(month).length;
+export function getAmountOfLessonsForMonth(month, year){
+    return getLessonsForMonth(month, year).length;
 }
 
-export function getLessonsForStudentForMonth(month, student){
-    return getLessonsForMonth(month).filter(lesson => lesson.name === student);
+export function getLessonsForStudentForMonth(month, year, student){
+    return getLessonsForMonth(month, year).filter(lesson => lesson.name === student);
 }
 
-export function getAmountOfLessonsForStudentForMonth(month, student) {
-    return getLessonsForStudentForMonth(month, student).length;
+export function getAmountOfLessonsForStudentForMonth(month, year, student) {
+    return getLessonsForStudentForMonth(month, year, student).length;
 }
 
 export function getNextIdForLessons(){
@@ -52,8 +52,8 @@ export function getNextId(value){
     return value === 'lesson' ? getNextIdForLessons() : getNextIdForStudents();
 }
 
-export function getIncomeForStudentPerMonth(month, student){
-    return getLessonsForStudentForMonth(month, student)
+export function getIncomeForStudentPerMonth(month, year, student){
+    return getLessonsForStudentForMonth(month, year, student)
             .reduce((cur, item) => +cur + +item.price, 0);
 }
 
