@@ -1,9 +1,7 @@
-/* 
-    Здесь подразумевается, что значение под ключами представляет собой
-    строку из объектов JSON.stringify(), разделенных ;
-*/
-// import Lesson from "./Components/Lessons-components/lesson";
-// import { Student } from "./Components/Students-components/Student";
+export function setNewValue(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
 
 export function getCurrentValue(key) {
     return localStorage.getItem(key)
@@ -79,7 +77,12 @@ export function getStudents(){
     return getCurrentValue('students').map(student => student.name);
 }
 
+/*const task = {
+    id: 0,
+    text: 'To create description of code',
+    done: true
+}*/
 
-// localStorage.setItem('tasks', JSON.stringify(task))
+//setNewValue('tasks', [task])
 
-console.log(typeof getCurrentValue('tasks')[0].id)
+

@@ -1,20 +1,19 @@
-import { addValueToLocalStorage, getCurrentValue } from "../../localStorageWorker";
+import { addValueToLocalStorage, getCurrentValue, setNewValue } from "../../localStorageWorker";
 
 export default function tasksReducer(tasks, action) {
     switch (action.type) {
         case "added" : {
-            const newTask = {
-                id: action.taskId,
-                text: action.text,
-                done: false
-            } 
-            
-            addValueToLocalStorage('tasks', newTask);
-            console.log(getCurrentValue('tasks'));
-            return [
+            const newTasks = [
                 ...tasks,
-                newTask
+                {
+                    id: action.taskId,
+                    text: action.text,
+                    done: false
+                } 
             ]
+            setNewValue('tasks', newTasks);
+            console.log(getCurrentValue('tasks'));
+            return newTasks;
         }
         case 'edited': {
             return tasks.map(task => {
@@ -22,7 +21,11 @@ export default function tasksReducer(tasks, action) {
             })
         }
         case "deleted": {
-            return tasks.filter(task => task.id !== action.taskId)
+            const newListOfTasks = tasks.filter(task => task.id !== action.taskId);
+            setNewValue('tasks', newListOfTasks);
+            console.log(`New list after delete`);
+            console.log(getCurrentValue('tasks'));
+            return newListOfTasks;
         }
         default: {
             throw Error(`There is no such type: ${action.type}`)

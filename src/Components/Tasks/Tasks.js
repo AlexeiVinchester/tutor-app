@@ -5,7 +5,12 @@ import '../ComponentsStyles/FormStyles.css'
 import TaskList from "./TasksList";
 import { getCurrentValue } from "../../localStorageWorker";
 
-const initialTasks = getCurrentValue('tasks');
+function getValueFromLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+}
+//console.log(getValueFromLocalStorage('tasks'))
+const initialTasks = getValueFromLocalStorage('tasks');
+console.log(initialTasks)
 let nextId = initialTasks.length;
 
 
