@@ -80,5 +80,6 @@ export function getStudents(){
 }
 
 
+// localStorage.setItem('tasks', JSON.stringify(task))
 
-
+console.log(typeof getCurrentValue('tasks')[0].id)

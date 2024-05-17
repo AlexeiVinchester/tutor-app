@@ -2,7 +2,8 @@ import { getFullEarnedSumm, getFullAmountOfLessons, getCurrentValue } from "../.
 import InfoCircle from "./InfoCircle";
 import Table from "../Table-components/Table";
 
-export default function FullStatistics({fieldsValues}){
+export default function FullStatistics(){
+    const fieldsValues = ['id', 'name', 'date', 'price'];
     return (
         <div className="full-statistics">
             <div className="full-info-container flex-row">

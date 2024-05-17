@@ -1,6 +1,6 @@
 import { useState } from "react";
 import InfoSection from "./InfoSection";
-import { 
+import {
     getStudents,
     getEarnedSumForMonth,
     getAmountOfLessonsForMonth,
@@ -8,7 +8,7 @@ import {
     getAmountOfLessonsForStudentForMonth
 } from "../../localStorageWorker";
 
-export default function MonthStatistics(){
+export default function MonthStatistics() {
     const months = {
         January: '01',
         February: '02',
@@ -50,7 +50,7 @@ export default function MonthStatistics(){
                             ))
                         }
                     </select>
-                    
+
                 </section>
                 <section className="select-section">
                     <label className="info-label">Choose student: </label>
@@ -65,21 +65,21 @@ export default function MonthStatistics(){
             </div>
             <div className="choosed-info-container">
                 <div className="month-info-container flex-row">
-                    <InfoSection 
+                    <InfoSection
                         header="Income this month"
                         value={getEarnedSumForMonth(month, year)}
                     />
-                    <InfoSection 
+                    <InfoSection
                         header="Number of lessons per month"
                         value={getAmountOfLessonsForMonth(month, year)}
                     />
                 </div>
                 <div className="student-info-container flex-row">
-                    <InfoSection 
+                    <InfoSection
                         header="Income for student per month"
                         value={getIncomeForStudentPerMonth(month, year, choosedStudent)}
                     />
-                    <InfoSection 
+                    <InfoSection
                         header={`Number of lessons per ${choosedStudent}`}
                         value={getAmountOfLessonsForStudentForMonth(month, year, choosedStudent)}
                     />

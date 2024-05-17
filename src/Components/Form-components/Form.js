@@ -15,7 +15,8 @@ export default function Form({
                 ...params, 
                 {...param}
             ]);
-            addValueToLocalStorage(storageKey, param)
+            addValueToLocalStorage(storageKey, param);
+            alert(`New ${value} was added successfully!`);
         }
         
         function handleChange(e){

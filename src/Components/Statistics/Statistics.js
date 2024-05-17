@@ -6,7 +6,6 @@ import FullStatistics from "./FullStatistics";
 import MonthStatistics from "./MonthStatistics";
 
 export default function Statistics() {
-    const fieldsValues = ['id', 'name', 'date', 'price'];
     
     const [showMonthStat, setShowMonthStat] = useState(false);
     const [showFullStat, setShowFullStat] = useState(false);
@@ -29,7 +28,7 @@ export default function Statistics() {
             <div className="statistics-container">
             {
                 showFullStat ? 
-                <FullStatistics fieldsValues={fieldsValues}/> : 
+                <FullStatistics /> : 
                 (showMonthStat ? <MonthStatistics /> : null)
             }
             </div>

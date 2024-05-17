@@ -6,6 +6,7 @@ import Students from './Components/Students-components/Students';
 import Statistics from './Components/Statistics/Statistics';
 import Contacts from './Components/Contacts/Contacts';
 import NavBar from './Components/Navbar/NavBar';
+import Tasks from './Components/Tasks/Tasks';
 function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/statistics" element={<Statistics />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/tasks" element={<Tasks />} />
       </Routes>
     </div>
   );

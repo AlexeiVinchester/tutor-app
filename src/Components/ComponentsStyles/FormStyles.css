@@ -87,4 +87,14 @@
     background-image: linear-gradient(to right, #61045f, #aa076b);
     font-size: 22px;
     cursor: pointer;
+} 
+
+.add-new-task-container {
+    width: 300px;
+}
+
+.ul-of-tasks {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
