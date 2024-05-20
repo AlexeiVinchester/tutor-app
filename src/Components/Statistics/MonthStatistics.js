@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InfoSection from "./InfoSection";
+import SelectSection from "./SelectSection";
 import {
     getStudents,
     getEarnedSumForMonth,
@@ -28,50 +29,33 @@ const currentYear = String(new Date().getFullYear());
 const students = getStudents();
 const years = ['2023', '2024'];
 
-
 export default function MonthStatistics() {
-    
+
     const [choosedStudent, setChoosedStudent] = useState(students[0]);
     const [month, setMonth] = useState(months[currentMonth]);
     const [year, setYear] = useState(currentYear);
-    console.log(choosedStudent);
-    console.log(month);
-    console.log(year);
-    console.log(getEarnedSumForMonth(month, year));
+
     return (
         <div className="choosed-statistics">
             <div className="section-container">
-                <section className="select-section">
-                    <label className="info-label">Choose year: </label>
-                    <select defaultValue={currentYear} onChange={(e) => setYear(e.target.value)}>
-                        {
-                            years.map(year => (
-                                <option className="select-option" key={year}>{year}</option>
-                            ))
-                        }
-                    </select>
-                </section>
-                <section className="select-section">
-                    <label className="info-label">Choose month: </label>
-                    <select defaultValue={currentMonth} onChange={(e) => setMonth(months[e.target.value])}>
-                        {
-                            Object.keys(months).map(month => (
-                                <option className="select-option" key={month}>{month}</option>
-                            ))
-                        }
-                    </select>
-
-                </section>
-                <section className="select-section">
-                    <label className="info-label">Choose student: </label>
-                    <select onChange={(e) => setChoosedStudent(e.target.value)}>
-                        {
-                            students.map(student => (
-                                <option className="select-option" key={student}>{student}</option>
-                            ))
-                        }
-                    </select>
-                </section>
+                <SelectSection 
+                    label="year"
+                    defaultValue={currentYear}
+                    setState={setYear}
+                    data={years}
+                />
+                <SelectSection 
+                    label="month"
+                    defaultValue={currentMonth}
+                    setState={setMonth}
+                    data={Object.keys(months)}
+                />
+                <SelectSection 
+                    label="student"
+                    defaultValue={students[0]}
+                    setState={setChoosedStudent}
+                    data={students}
+                />
             </div>
             <div className="choosed-info-container">
                 <div className="month-info-container flex-row">
