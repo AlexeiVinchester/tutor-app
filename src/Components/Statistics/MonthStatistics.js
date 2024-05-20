@@ -8,32 +8,42 @@ import {
     getAmountOfLessonsForStudentForMonth
 } from "../../localStorageWorker";
 
+const months = {
+    January: '01',
+    February: '02',
+    March: '03',
+    April: '04',
+    May: '05',
+    June: '06',
+    July: '07',
+    August: '08',
+    September: '09',
+    October: '10',
+    November: '11',
+    December: '12'
+};
+
+const currentMonth = Object.keys(months)[new Date().getMonth()];
+const currentYear = String(new Date().getFullYear());
+const students = getStudents();
+const years = ['2023', '2024'];
+
+
 export default function MonthStatistics() {
-    const months = {
-        January: '01',
-        February: '02',
-        March: '03',
-        April: '04',
-        May: '05',
-        June: '06',
-        July: '07',
-        August: '08',
-        September: '09',
-        October: '10',
-        November: '11',
-        December: '12'
-    };
-    const students = getStudents();
-    const years = ['2023', '2024'];
+    
     const [choosedStudent, setChoosedStudent] = useState(students[0]);
-    const [month, setMonth] = useState(months['January']);
-    const [year, setYear] = useState('2023');
+    const [month, setMonth] = useState(months[currentMonth]);
+    const [year, setYear] = useState(currentYear);
+    console.log(choosedStudent);
+    console.log(month);
+    console.log(year);
+    console.log(getEarnedSumForMonth(month, year));
     return (
         <div className="choosed-statistics">
             <div className="section-container">
                 <section className="select-section">
                     <label className="info-label">Choose year: </label>
-                    <select onChange={(e) => setYear(e.target.value)}>
+                    <select defaultValue={currentYear} onChange={(e) => setYear(e.target.value)}>
                         {
                             years.map(year => (
                                 <option className="select-option" key={year}>{year}</option>
@@ -43,7 +53,7 @@ export default function MonthStatistics() {
                 </section>
                 <section className="select-section">
                     <label className="info-label">Choose month: </label>
-                    <select onChange={(e) => setMonth(months[e.target.value])}>
+                    <select defaultValue={currentMonth} onChange={(e) => setMonth(months[e.target.value])}>
                         {
                             Object.keys(months).map(month => (
                                 <option className="select-option" key={month}>{month}</option>

@@ -3,14 +3,13 @@ import taskReducer from "./taskReducer";
 import AddTask from "./AddTask";
 import '../ComponentsStyles/FormStyles.css'
 import TaskList from "./TasksList";
-import { getCurrentValue } from "../../localStorageWorker";
 
 function getValueFromLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
 }
-//console.log(getValueFromLocalStorage('tasks'))
+
 const initialTasks = getValueFromLocalStorage('tasks');
-console.log(initialTasks)
+console.log(initialTasks);
 let nextId = initialTasks.length;
 
 
