@@ -1,4 +1,4 @@
-import { addValueToLocalStorage, getCurrentValue, setNewValue } from "../../localStorageWorker";
+import { getCurrentValue, setNewValue } from "../../localStorageWorker";
 
 export default function tasksReducer(tasks, action) {
     switch (action.type) {

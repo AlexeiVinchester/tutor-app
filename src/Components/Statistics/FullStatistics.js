@@ -1,9 +1,10 @@
 import { getFullEarnedSumm, getFullAmountOfLessons, getCurrentValue } from "../../localStorageWorker";
 import InfoCircle from "./InfoCircle";
 import Table from "../Table-components/Table";
+import { fieldsValuesForLessons } from "./usefulConstants";
 
 export default function FullStatistics(){
-    const fieldsValues = ['id', 'name', 'date', 'price'];
+    
     return (
         <div className="full-statistics">
             <div className="full-info-container flex-row">
@@ -18,7 +19,7 @@ export default function FullStatistics(){
             </div>
             <Table 
                 caption="Lessons" 
-                columnNames={fieldsValues} 
+                columnNames={fieldsValuesForLessons} 
                 data={getCurrentValue('lessons')} 
                 className="lessons-table"
             />

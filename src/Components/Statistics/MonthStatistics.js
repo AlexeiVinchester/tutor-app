@@ -2,32 +2,12 @@ import { useState } from "react";
 import InfoSection from "./InfoSection";
 import SelectSection from "./SelectSection";
 import {
-    getStudents,
     getEarnedSumForMonth,
     getAmountOfLessonsForMonth,
     getIncomeForStudentPerMonth,
     getAmountOfLessonsForStudentForMonth
 } from "../../localStorageWorker";
-
-const months = {
-    January: '01',
-    February: '02',
-    March: '03',
-    April: '04',
-    May: '05',
-    June: '06',
-    July: '07',
-    August: '08',
-    September: '09',
-    October: '10',
-    November: '11',
-    December: '12'
-};
-
-const currentMonth = Object.keys(months)[new Date().getMonth()];
-const currentYear = String(new Date().getFullYear());
-const students = getStudents();
-const years = ['2023', '2024'];
+import { months, currentMonth, currentYear, students, years } from "./usefulConstants";
 
 export default function MonthStatistics() {
 
