@@ -6,7 +6,13 @@
     justify-content: space-around;
 }
 
-.full-statistics {
+.full-statistics-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.full-stat-for-all, .full-stat-for-student {
     display: flex;
     flex-direction: column;
     align-items: center;

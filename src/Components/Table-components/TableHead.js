@@ -3,8 +3,8 @@ export default function TableHead({ columnNames }){
         <thead>
             <tr>
                 {
-                    columnNames.map(columnName => (
-                        <th>{columnName}</th>
+                    columnNames.map((columnName, index) => (
+                        <th key={index}>{columnName}</th>
                     ))
                 }
             </tr>

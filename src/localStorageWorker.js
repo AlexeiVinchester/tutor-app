@@ -77,6 +77,11 @@ export function getStudents(){
     return getCurrentValue('students').map(student => student.name);
 }
 
+export function getFullIncomePerStudent(student) {
+    return getLessonsForStudent(student).reduce((cur, item) => +cur + +item.price, 0);
+}
+
+
 /*const task = {
     id: 0,
     text: 'To create description of code',
