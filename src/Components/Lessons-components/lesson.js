@@ -210,8 +210,8 @@ let startLessons = [
     new Lesson('198', 'Diana', '25', '2024-05-08'),
     new Lesson('199', 'Kirill_Yan', '25', '2024-05-09'),
 ];
-let newStr = startLessons.map(item => JSON.stringify(item)).join(' ; ');
-localStorage.setItem('lessons', newStr)
+//let newStr = startLessons.map(item => JSON.stringify(item)).join(' ; ');
+//localStorage.setItem('lessons', newStr)
 
 
 

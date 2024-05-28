@@ -1,4 +1,3 @@
-
 .statistics-container {
     margin: 15px;
     display: flex;
@@ -12,16 +11,18 @@
     align-items: center;
 }
 
-.full-stat-for-all, .full-stat-for-student {
+.full-stat-for-all,
+.full-stat-for-student {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .choosed-statistics {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
@@ -45,6 +46,7 @@
     text-align: center;
     margin-top: 20px;
 }
+
 .select-section {
     width: 370px;
     padding: 20px;
@@ -58,10 +60,10 @@
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-    color: transparent;    
-	-webkit-background-clip: text;
-	background-clip: text;
-    background-image: linear-gradient(to right, #aa076b , #61045f);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, #aa076b, #61045f);
     padding-bottom: 8px;
     margin-right: 6px;
 }
@@ -71,8 +73,8 @@
     padding: 5px;
     border-radius: 10px;
     font: 400 16px Arial;
-    
-    color:#aa076b;
+
+    color: #aa076b;
     text-align: center;
     border: 1px solid #61045f;
 }
@@ -99,7 +101,7 @@
     padding: 2px;
 }
 
-.value-area .inner-area{
+.value-area .inner-area {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -112,12 +114,39 @@
     justify-content: center;
     align-items: center;
 }
-.value-area .inner-area .text{
-  font-size: 36px;
-  font-weight: 400;
+
+.value-area .inner-area .text {
+    font-size: 36px;
+    font-weight: 400;
 }
 
+.button-box {
+    width: 360px;
+    margin: 35px;
+    position: relative;
+    box-shadow: 0 0 20px 9px #de24b91f;
+    border-radius: 30px;
+    background-color: #dfdbdf;
+}
 
+.toggle-button {
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    border-radius: 30px;
+    
+} 
+.active-button {
+    transition: .5s;
+    background: linear-gradient(to right, #aa076b, #61045f);
+    color: white;
+}
 
-
-
+.statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

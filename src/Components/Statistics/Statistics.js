@@ -7,7 +7,7 @@ import MonthStatistics from "./MonthStatistics";
 
 export default function Statistics() {
     
-    const [showMonthStat, setShowMonthStat] = useState(false);
+    const [showMonthStat, setShowMonthStat] = useState(true);
     const [showFullStat, setShowFullStat] = useState(false);
 
     function handleClickMonth() {
@@ -21,10 +21,25 @@ export default function Statistics() {
     }
 
     return (
-        <div>
+        <div className="statistics">
             <h1 className="tutor-name text-style">Alexei Vinnichek</h1>
-            <button onClick={handleClickMonth}>Show month statistics</button>
-            <button onClick={handleClickFull}>Show full statistics</button>
+            <div className="button-box">
+                <button 
+                    type="button" 
+                    className={`toggle-button ${showMonthStat ? "active-button" : ''}`}
+                    onClick={handleClickMonth}
+                >
+                    Show month statistics
+                </button>
+                <button 
+                    type="button" 
+                    className={`toggle-button ${showFullStat ? "active-button" : ''}`} 
+                    onClick={handleClickFull}
+                >
+                    Show full statistics
+                </button>
+            </div>
+            
             <div className="statistics-container">
             {
                 showFullStat ? 
