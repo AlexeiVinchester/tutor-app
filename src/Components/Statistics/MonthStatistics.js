@@ -5,9 +5,13 @@ import {
     getEarnedSumForMonth,
     getAmountOfLessonsForMonth,
     getIncomeForStudentPerMonth,
-    getAmountOfLessonsForStudentForMonth
+    getAmountOfLessonsForStudentForMonth,
+    getLessonsForMonth,
+    getLessonsForStudentForMonth
 } from "../../localStorageWorker";
 import { months, currentMonth, currentYear, students, years } from "./usefulConstants";
+import Table from "../Table-components/Table";
+import { fieldsValuesForLessons } from "./usefulConstants";
 
 export default function MonthStatistics() {
 
@@ -37,25 +41,41 @@ export default function MonthStatistics() {
                     data={students}
                 />
             </div>
-            <div className="choosed-info-container">
-                <div className="month-info-container flex-row">
-                    <InfoSection
-                        header="Income this month"
-                        value={getEarnedSumForMonth(month, year)}
-                    />
-                    <InfoSection
-                        header="Number of lessons per month"
-                        value={getAmountOfLessonsForMonth(month, year)}
+            <div className="choosed-info-container flex-row">
+                <div className="month-info-container flex-column">
+                    <div className="flex-row">
+                        <InfoSection
+                            header="Income this month"
+                            value={getEarnedSumForMonth(month, year)}
+                        />
+                        <InfoSection
+                            header="Number of lessons per month"
+                            value={getAmountOfLessonsForMonth(month, year)}
+                        />
+                    </div>
+                    <Table 
+                        caption="All lessons"
+                        columnNames={fieldsValuesForLessons}
+                        className='lessons-table'
+                        data={getLessonsForMonth(month, year)}
                     />
                 </div>
-                <div className="student-info-container flex-row">
-                    <InfoSection
-                        header="Income for student per month"
-                        value={getIncomeForStudentPerMonth(month, year, choosedStudent)}
-                    />
-                    <InfoSection
-                        header={`Number of lessons per ${choosedStudent}`}
-                        value={getAmountOfLessonsForStudentForMonth(month, year, choosedStudent)}
+                <div className="student-info-container flex-column">
+                    <div className="flex-row">
+                        <InfoSection
+                            header="Income for student per month"
+                            value={getIncomeForStudentPerMonth(month, year, choosedStudent)}
+                        />
+                        <InfoSection
+                            header={`Number of lessons per ${choosedStudent}`}
+                            value={getAmountOfLessonsForStudentForMonth(month, year, choosedStudent)}
+                        />
+                    </div>
+                    <Table 
+                        caption="Lessons for student"
+                        columnNames={fieldsValuesForLessons}
+                        className='lessons-table'
+                        data={getLessonsForStudentForMonth(month, year, choosedStudent)}
                     />
                 </div>
             </div>
