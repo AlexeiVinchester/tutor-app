@@ -2,7 +2,7 @@ import { getFullEarnedSumm, getFullAmountOfLessons, getCurrentValue } from "../.
 import InfoCircle from "./InfoCircle";
 import Table from "../Table-components/Table";
 import { fieldsValuesForLessons } from "./usefulConstants";
-import { students } from "./usefulConstants";
+import { allStudents } from "./usefulConstants";
 import { useState } from "react";
 import SelectSection from "./SelectSection";
 import InfoSection from "./InfoSection";
@@ -14,7 +14,7 @@ import {
 
 export default function FullStatistics(){
 
-    const [student, setStudent] = useState(students[0]);
+    const [student, setStudent] = useState(allStudents[0]);
     
     return (
         <div className="full-statistics-container">
@@ -40,9 +40,9 @@ export default function FullStatistics(){
             <div className="full-stat-for-student">
                 <SelectSection 
                     label="student"
-                    defaultValue={students[0]}
+                    defaultValue={allStudents[0]}
                     setState={setStudent}
-                    data={students}
+                    data={allStudents}
                 />
                 <InfoSection
                     header="Number of lessons per student"

@@ -14,9 +14,15 @@ export const months = {
     November: '11',
     December: '12'
 };
-
+export function getMonthName(month){
+    for(let key of Object.keys(months)){
+        if(months[key] === month) {
+            return key;
+        }
+    }
+}
 export const currentMonth = Object.keys(months)[new Date().getMonth()];
 export const currentYear = String(new Date().getFullYear());
-export const students = getStudents();
+export const allStudents = getStudents();
 export const years = ['2023', '2024'];
 export const fieldsValuesForLessons = ['id', 'name', 'date', 'price'];

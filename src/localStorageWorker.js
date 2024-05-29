@@ -22,6 +22,12 @@ export function getLessonsForMonth(month, year){
     return getCurrentValue('lessons').filter(lesson => lesson.date.includes(`${year}-${month}-`))
 }
 
+export function getStudentsForMonth(month, year) {
+    return Array.from(new Set(
+        getLessonsForMonth(month, year).map(lesson => lesson.name)
+    ));
+}
+
 export function getEarnedSumForMonth(month, year){
     return getLessonsForMonth(month, year).reduce((cur, item) => +cur + +item.price, 0);
 }
